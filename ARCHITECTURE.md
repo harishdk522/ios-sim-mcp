@@ -414,7 +414,7 @@ sequenceDiagram
         S->>I: spawnSync magick - -resize {pngWidth/scale}x -quality 75 jpg:-
         I-->>S: JPEG Buffer (mimeType = image/jpeg)
     end
-    S->>F: mkdir -p OUTPUT_DIR; write screenshot-<ISO-ts>.png
+    S->>F: mkdir -p OUTPUT_DIR, then write screenshot-<ISO-ts>.png
     S-->>A: [{type:image, data:base64, mimeType}, {type:text, "Screenshot saved to …"}]
 ```
 
