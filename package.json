@@ -1,0 +1,49 @@
+{
+  "name": "ios-sim-mcp",
+  "version": "1.0.0",
+  "description": "iOS Simulator MCP server",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://code.devsnc.com/harish-dewangan/ios-sim-mcp.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "Harish Dewangan",
+  "scripts": {
+    "start": "chmod +x src/index.js && node src/index.js",
+    "lint": "eslint .",
+    "test": "nyc mocha test/*.js",
+    "clean": "rm -rf lib",
+    "prepare": "husky"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "fast-xml-parser": "^5.0.9",
+    "zod-to-json-schema": "^3.24.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
+    "eslint": "^9.19.0",
+    "eslint-plugin": "^1.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-notice": "^1.0.0",
+    "husky": "^9.1.7",
+    "nyc": "^17.1.0",
+    "mocha": "^11.1.0"
+  },
+  "main": "index.js",
+  "bin": {
+    "ios-sim-mcp": "src/index.js"
+  },
+  "directories": {
+    "src": "src"
+  }
+}
